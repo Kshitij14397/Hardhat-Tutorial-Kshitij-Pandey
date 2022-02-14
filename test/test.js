@@ -153,7 +153,7 @@ describe("Token", function(){
         
 
         await hardhatToken.connect(addr1).burn(addr1.address, 25);
-         expect(await hardhatToken.totalSupply()).to.not.equal(initialTotalSupply);
+         expect(await hardhatToken.totalSupply()).to.equal(initialTotalSupply-25);
 
          await console.log(await hardhatToken.totalSupply());
 
